@@ -9,7 +9,9 @@
 .status-bar__column {
   width: 33%;
 }
-
+.status-bar__column:first-child {
+  margin-left: 5px;
+}
 .status-bar__column:first-child span {
   margin-right: 5px;
 }
@@ -22,6 +24,12 @@
   justify-content: flex-end;
   align-items: center;
 }
-.status-bar__column .fa-battery-full {
-  margin: 0px 5px;
+/* 
+.status-bar__column:last-child .fa-battery-full {
+} */
+.status-bar__column:last-child span,
+.status-bar__column .fa-battery-full, 
+.status-bar__column .fa-bolt {
+  margin-right: 10px;
+  
 }
