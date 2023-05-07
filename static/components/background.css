@@ -54,11 +54,27 @@ body::after {
         100% {
             transition: none;
         }
-        
       }
+@keyframes settingTitleloading {
+0% {
+    opacity: 1;
+}
+50% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}      
 .settings__setting-column i {
     animation: EmoticonSideIn 1.5s linear infinite;
 }
+.settings__setting-column span {
+    animation: settingTitleloading 1.5s linear infinite;
+}
+
+
+
 .settings__setting div:last-child {
     animation: settingTextMove 1.5s linear infinite;
 }
