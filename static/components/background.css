@@ -1,0 +1,71 @@
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2023/04/28/14/35/dog-7956828_1280.jpg");
+    background-position: center center;
+    position: relative;
+    isolation: isolate;
+}
+@keyframes backgroundFadeIn {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.8;
+    }
+  }
+body::after {
+    content: '';
+  position: absolute;
+  background: white;
+  z-index: -1;
+  inset: 0;
+  animation: backgroundFadeIn 1.5s linear forwards;
+}
+@keyframes EmoticonSideIn {
+    0% {
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+@keyframes settingTextMove {
+        0% {
+            color: tomato;
+        }
+        50% {
+            transform: translateY(-100px) scale(1.2);
+            color: tomato;
+        }
+        100% {
+            transform: none;
+        }
+      }
+@keyframes statusBarIconMove {
+        0% {
+            color: tomato;
+        }
+        50% {
+            transform: translateX(-500px) rotateZ(360deg);
+        }
+        100% {
+            transition: none;
+        }
+        
+      }
+.settings__setting-column i {
+    animation: EmoticonSideIn 1.5s linear infinite;
+}
+.settings__setting div:last-child {
+    animation: settingTextMove 1.5s linear infinite;
+}
+.status-bar__column i:hover {
+    animation: statusBarIconMove 5s linear forwards;
+}
+
+.status-bar {
+    z-index: 99;
+}
