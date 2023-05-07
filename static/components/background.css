@@ -70,6 +70,7 @@ body::after {
     animation: EmoticonSideIn 1.5s linear infinite;
 }
 .settings__setting-column span {
+    display: inline-block;
     animation: settingTitleloading 1.5s linear infinite;
 }
 
